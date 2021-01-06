@@ -2,9 +2,9 @@
 
 Pretty obvious so yeah.
 <pre>
-[0] playboy.txt [1] .README.md.swp [2] microsloth.txt [3] big_alien.txt [4] saturn.txt [5] hello_kitty.txt [6] linux_ping.txt [7] .git [8] alien.txt 
+[0] playboy.txt [1] microsloth.txt [2] big_alien.txt [3] saturn.txt [4] hello_kitty.txt [5] linux_ping.txt [6] alien.txt 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-what art do you want to see: 5   
+what art do you want to see: 4
  _   _         _  _          _   __ _
 | | | |  ___  | || |  ___   | | / /(_)  _     _
 | |_| | / _ \ | || | / _ \  | |/ /  _ _| |_ _| |_  _  _
@@ -22,6 +22,7 @@ what art do you want to see: 5
                     _\_____________/_
                    /  \/  (___)  \/  \
                    \__(  o     o  )__/
+
 
 </pre>
 auto just prints them all.
