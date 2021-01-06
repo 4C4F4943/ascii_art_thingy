@@ -25,4 +25,4 @@ what art do you want to see: 17
                    /  \/  (___)  \/  \
                    \__(  o     o  )__/
 </pre>
-auto just prints them all.
+auto just prints them all. It should also fit it to youre terminal window so yeah...
