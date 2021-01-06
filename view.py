@@ -6,11 +6,17 @@ import  pyfiglet
 fils = os.listdir()
 files=[]
 
+leng = os.get_terminal_size()
 for i in range(len(fils)):
 	if fils[i] != "view.py" and fils[i] != ".view.py.swo " and fils[i] != "README.md" and fils[i] != ".git":
 		files.append(fils[i])
 what_print = ""
+how_many_times_bigger = 0
 for i in range(len(files)):
+	inb = what_print + files[i]
+	if len(inb) >= leng[0]*how_many_times_bigger:
+		how_many_times_bigger += 1
+		what_print += "\n"
 	what_print += "[%.1i] "%(i) + files[i]+" "
 x = input("auto ?y/n: ")
 
@@ -25,9 +31,7 @@ if x == "y":
 	auto()
 elif x == "n":
 	while True:
-		print("\n")
 		print(what_print)
-		leng = os.get_terminal_size()
 		print("-"*leng[0])
 		inp = input("what art do you want to see: ")
 		if inp == "exit":
@@ -41,7 +45,8 @@ elif x == "n":
 			os.system(cmd)
 		except:
 			pass
-
+		
+		print("\n")
 
 l = pyfiglet.figlet_format("That's it :)",font="smkeyboard")
 print(l)
