@@ -13,11 +13,11 @@ for i in range(len(fils)):
 what_print = ""
 how_many_times_bigger = 0
 for i in range(len(files)):
-	inb = what_print + files[i]
+	inb = what_print + files[i][:-4]
 	if len(inb) >= leng[0]*how_many_times_bigger:
 		how_many_times_bigger += 1
 		what_print += "\n"
-	what_print += "[%.1i] "%(i) + files[i]+" "
+	what_print += "[%.1i] "%(i) + files[i][:-4]+" "
 
 def auto():
 	for y in range(len(files)):
