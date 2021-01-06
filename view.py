@@ -8,7 +8,7 @@ files=[]
 
 leng = os.get_terminal_size()
 for i in range(len(fils)):
-	if fils[i] != "view.py" and fils[i] != ".view.py.swo " and fils[i] != "README.md" and fils[i] != ".git":
+	if fils[i][-4:] == ".txt":
 		files.append(fils[i])
 what_print = ""
 how_many_times_bigger = 0
@@ -18,7 +18,6 @@ for i in range(len(files)):
 		how_many_times_bigger += 1
 		what_print += "\n"
 	what_print += "[%.1i] "%(i) + files[i]+" "
-x = input("auto ?y/n: ")
 
 def auto():
 	for y in range(len(files)):
@@ -26,10 +25,8 @@ def auto():
 		os.system(cmd)
 		time.sleep(4)	
 
-
-if x == "y":
-	auto()
-elif x == "n":
+x = "n"
+if x == "n":
 	while True:
 		print(what_print)
 		print("-"*leng[0])
