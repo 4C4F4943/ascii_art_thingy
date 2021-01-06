@@ -7,7 +7,7 @@ fils = os.listdir()
 files=[]
 
 for i in range(len(fils)):
-	if fils[i] != "view.py" and fils[i] != ".view.py.swo ":
+	if fils[i] != "view.py" and fils[i] != ".view.py.swo " and fils[i] != "README.md" and fils[i] != ".git":
 		files.append(fils[i])
 what_print = ""
 for i in range(len(files)):
