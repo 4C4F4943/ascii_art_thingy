@@ -55,13 +55,20 @@ for i in range(len(files)):
 		what_print += "\n"
 	what_print += "[%.1i] "%(i) + files[i][:-4]+" "
 
-def auto():
+def auto(rainbow=False):
 	for y in range(len(files)):
-		os.system("clear")
-		cmd = "cat " + files[y]
-		os.system(cmd)
+		
+		os.system("clear")	
+		if rainbow:
+			z = []
+			fil = open(files[y],"r").read().split("\n")
+			for i in range(len(fil)):
+				z.append(print_rainbow(fil[i])+"\n")	
+			print("".join(z))		
+		else:
+			cmd ="cat "+ files[y]
+			os.system(cmd)
 		time.sleep(4)	
-		print()
 x = "n"
 if x == "n":
 	while True:
@@ -76,14 +83,15 @@ if x == "n":
 		elif inp == "auto":
 			auto()
 		if x[0] == "rainbow":
-			
-			fil = open(files[int(x[1])],"r").read().split("\n")
+			try:
+				fil = open(files[int(x[1])],"r").read().split("\n")
 
-			z = []
-			for i in range(len(fil)):
-  				z.append(print_rainbow(fil[i]+"\n"))
-			print("".join(z))
-
+				z = []
+				for i in range(len(fil)):
+  					z.append(print_rainbow(fil[i]+"\n"))
+				print("".join(z))
+			except:
+				auto(rainbow=True)
 	
 		try:
 			cmd = "cat " + files[int(inp)]
